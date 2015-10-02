@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <script src="js/vendor/phaser/phaser.min.js"></script>
+        <script src="js/settings.js"></script>
+        <script src="js/boot.js"></script>
+        <script src="js/preloader.js"></script>
+        <script src="js/menu.js"></script>
+        <script src="js/worlds.js"></script>
+        <script src="js/target.js"></script>
+        <!-- levels -->
+        <script src="js/level.js"></script>
+        <script src="js/levels.js"></script>
+        <script>
+
+            // document.addEventListener("intel.xdk.device.ready",function(){ intel.xdk.device.hideSplashScreen(); },false);
+            // (function () {
+                var WIDTH = 640;
+                var HEIGHT = 960;
+
+                var game = new Phaser.Game(WIDTH, HEIGHT, Phaser.CANVAS, "gamediv", {}, false, true);
+                game.state.add("Boot", Circolor.Boot);
+                game.state.add("Preloader", Circolor.Preloader);
+                game.state.add("Menu", Circolor.Menu);
+                game.state.add("Worlds", Circolor.Worlds);
+                game.state.add("Level001" , Circolor.Level001);
+                game.state.add("Level002", Circolor.Level002);
+                game.state.add("Level003", Circolor.Level003);
+                game.state.add("Level004", Circolor.Level004);
+                game.state.add("Level005", Circolor.Level005);
+                game.state.add("Level006", Circolor.Level006);
+                game.state.add("Level007", Circolor.Level007);
+                game.state.add("Level008", Circolor.Level008);
+                game.state.add("Level009", Circolor.Level009);
+                game.state.add("Level010", Circolor.Level010);
+                game.state.add("Level011", Circolor.Level011);
+                game.state.add("Level012", Circolor.Level012);
+
+                // Boot the game
+                game.state.start("Boot");
+
+            // })();
+        </script>
+
+        <style type="text/css">
+            body {
+                background-color: #000000;
+                margin: 0px;
+                padding: 0px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="gamediv"></div>
+    </body>
+</html>

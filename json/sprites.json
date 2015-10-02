@@ -1,0 +1,102 @@
+{"frames": [
+
+{
+	"filename": "blob001.png",
+	"frame": {"x":260,"y":2,"w":15,"h":15},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":15,"h":15},
+	"sourceSize": {"w":15,"h":15},
+	"pivot": {"x":0,"y":0}
+},
+{
+	"filename": "blob002.png",
+	"frame": {"x":203,"y":210,"w":25,"h":25},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":25,"h":25},
+	"sourceSize": {"w":25,"h":25},
+	"pivot": {"x":0,"y":0}
+},
+{
+	"filename": "circle001.png",
+	"frame": {"x":2,"y":143,"w":65,"h":65},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":65,"h":65},
+	"sourceSize": {"w":65,"h":65},
+	"pivot": {"x":0,"y":0}
+},
+{
+	"filename": "circle002.png",
+	"frame": {"x":2,"y":210,"w":65,"h":65},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":65,"h":65},
+	"sourceSize": {"w":65,"h":65},
+	"pivot": {"x":0,"y":0}
+},
+{
+	"filename": "circle003.png",
+	"frame": {"x":69,"y":143,"w":65,"h":65},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":65,"h":65},
+	"sourceSize": {"w":65,"h":65},
+	"pivot": {"x":0,"y":0}
+},
+{
+	"filename": "circle004.png",
+	"frame": {"x":69,"y":210,"w":65,"h":65},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":65,"h":65},
+	"sourceSize": {"w":65,"h":65},
+	"pivot": {"x":0,"y":0}
+},
+{
+	"filename": "circle005.png",
+	"frame": {"x":136,"y":143,"w":65,"h":65},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":65,"h":65},
+	"sourceSize": {"w":65,"h":65},
+	"pivot": {"x":0,"y":0}
+},
+{
+	"filename": "circle006.png",
+	"frame": {"x":136,"y":210,"w":65,"h":65},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":65,"h":65},
+	"sourceSize": {"w":65,"h":65},
+	"pivot": {"x":0,"y":0}
+},
+{
+	"filename": "circle007.png",
+	"frame": {"x":203,"y":143,"w":65,"h":65},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":65,"h":65},
+	"sourceSize": {"w":65,"h":65},
+	"pivot": {"x":0,"y":0}
+},
+{
+	"filename": "playButton.png",
+	"frame": {"x":2,"y":2,"w":256,"h":139},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":256,"h":139},
+	"sourceSize": {"w":256,"h":139},
+	"pivot": {"x":0,"y":0}
+}],
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "sprites.png",
+	"format": "RGBA8888",
+	"size": {"w":277,"h":277},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:44b7d65d9b9501135485fdf8d859b575:fc550cd594eebbdaecdbd3261f499f70:1eabdf11f75e3a4fe3147baf7b5be24b$"
+}
+}

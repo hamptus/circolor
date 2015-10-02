@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/phaser/2.1.3/phaser.min.js"></script>
+        <script>
+            // (function () {
+                var WIDTH = 320;
+                var HEIGHT = 480;
+                var CONTACT = false;
+                var blobSize = 20;
+                var circObj = new Phaser.Circle(0, 0, blobSize);
+
+                var game = new Phaser.Game(WIDTH, HEIGHT, Phaser.CANVAS, "", {init: init, preload: preload, create: create, render: render}, false, true);
+
+                function init() {
+                    this.stage.backgroundColor = 0xFAFAFF;
+                    // center the game
+                    this.scale.pageAlignHorizontally = true;
+                    this.scale.pageAlignVertically = true;
+                    this.scale.refresh();
+                }
+                function preload(game) {
+                    game.physics.startSystem(Phaser.Physics.P2JS);
+                }
+
+                function create(game) {
+                    spacebar = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
+                    game.world.setBounds(0, 100, game.world.width, 400);
+
+                    var circle = game.add.graphics();
+                    circle.lineStyle(0);
+                    circle.beginFill(0xff0000, 1);
+                    circle.drawShape(circObj);
+                    // Add our blob
+                    blob = game.add.sprite(game.world.centerX, game.world.bounds.bottom - blobSize);
+                    game.physics.p2.enable(blob);
+                    // Add the graphics as a child to the blob
+                    blob.addChild(circle);
+                    // Make sure the body is the same shape as our cirlce
+                    blob.body.setCircle(blobSize);
+                    // Add a target
+                    target = game.add.sprite(game.world.centerX, game.world.centerY);
+                    game.physics.p2.enable(target);
+                    // Make sure the blob is the same size as the ring
+                    var ring = game.add.graphics();
+                    ring.lineStyle(2, 0x000000, 0.25);
+                    ring.drawCircle(0, 0, 50);
+
+                    target.addChild(ring);
+                    target.body.setCircle(50, 0, 0);
+                    target.body.kinematic = true;
+
+                    // When the spacebar is pressed, the blob should move upwards
+                    spacebar.onDown.add(function() {
+                        blob.body.velocity.y = -150;
+                    }, this);
+
+                    // Update the contact variable when the blob touches the ring
+                    blob.body.onBeginContact.add(function (){
+                        CONTACT = true;
+                    });
+
+                }
+
+                function render(game) {
+                    target.body.debug = true;
+                    blob.body.debug = true;
+                    if (CONTACT) {
+                         game.debug.text("CONTACT!", 25, 25, "#000000");
+                         game.time.events.add(Phaser.Timer.SECOND * 1, function (b) {
+                            game.state.restart();
+                            CONTACT = false;
+                        }, game);
+                    }
+                }
+
+
+
+            // })();
+        </script>
+
+        <style type="text/css">
+            body {
+                background-color: #000000;
+                margin: 0px;
+                padding: 0px;
+            }
+        </style>
+    </head>
+    <body>
+
+    </body>
+</html>
